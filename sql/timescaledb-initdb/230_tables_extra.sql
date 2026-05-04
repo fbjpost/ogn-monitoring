@@ -55,8 +55,10 @@ CREATE TABLE IF NOT EXISTS weglide (
     registration        TEXT,
     CN                  TEXT,
     model               TEXT,
-    until               TIMESTAMPTZ,
-    pilot               TEXT
+    excluded            BOOLEAN NOT NULL,
+    tracked             BOOLEAN NOT NULL,
+    identified          BOOLEAN NOT NULL,
+    updated             TIMESTAMPTZ
 );
 
 CREATE TABLE IF NOT EXISTS opensky (
